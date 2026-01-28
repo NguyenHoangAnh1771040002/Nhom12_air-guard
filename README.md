@@ -44,9 +44,9 @@ Nếu chỉ dùng dữ liệu có nhãn ít ỏi, mô hình sẽ không tổng q
 graph LR
     A[Raw Data] --> B[Preprocessing]
     B --> C[Feature Engineering]
-    C --> D{Split Data\n(Cutoff 2017)}
-    D -->|Labeled Set\n(~8.7%)| E[Baseline Model]
-    D -->|Unlabeled Set\n(~91.3%)| F[Semi-Supervised Loop]
+    C --> D{"Split Data (Cutoff 2017)"}
+    D -->|"Labeled Set (~8.7%)"| E[Baseline Model]
+    D -->|"Unlabeled Set (~91.3%)"| F[Semi-Supervised Loop]
     F --> G[Self-Training]
     F --> H[Co-Training]
     E & G & H --> I[Test on 2017 Data]
