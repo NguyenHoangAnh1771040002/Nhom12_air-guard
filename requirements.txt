@@ -8,3 +8,7 @@ papermill>=2.5
 ucimlrepo>=0.0.7
 nbformat>=5.9
 statsmodels>=0.14
+
+# Dashboard dependencies
+streamlit>=1.28
+plotly>=5.18

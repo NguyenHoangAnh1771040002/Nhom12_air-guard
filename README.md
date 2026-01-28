@@ -208,16 +208,22 @@ Baseline chỉ tập trung tối ưu cho các lớp đa số (Moderate, Unhealth
 ```
 Nhom12_air-guard/
 ├── data/
-│   ├── raw/                # Dữ liệu gốc
-│   └── processed/          # Dữ liệu đã xử lý & metrics
+│   ├── raw/                         # Dữ liệu gốc từ UCI
+│   └── processed/                   # Dữ liệu đã xử lý & metrics JSON
 ├── notebooks/
-│   ├── EDA_Preprocessing.ipynb
-│   ├── Training_SemiSupervised.ipynb
-│   └── Analysis_Report.ipynb
-├── src/                    # Thư viện mã nguồn (utils)
-├── app.py                  # Dashboard Streamlit
-├── run_papermill.py        # Automation Script
-├── requirements.txt
+│   ├── preprocessing_and_eda.ipynb  # Tiền xử lý & Khám phá dữ liệu
+│   ├── semi_dataset_preparation.ipynb  # Chuẩn bị dataset cho Semi-supervised
+│   ├── semi_self_training.ipynb     # Huấn luyện Self-Training
+│   ├── semi_co_training.ipynb       # Huấn luyện Co-Training
+│   └── semi_supervised_report.ipynb # Báo cáo & So sánh kết quả
+├── src/
+│   ├── semi_supervised_library.py   # Thư viện Semi-supervised
+│   ├── classification_library.py    # Thư viện Classification
+│   └── ...                          # Các module khác
+├── app.py                           # Dashboard Streamlit
+├── run_papermill.py                 # Automation Script (Papermill)
+├── requirements.txt                 # Dependencies
+├── LICENSE.txt                      # MIT License
 └── README.md
 ```
 
